@@ -1,0 +1,13 @@
+@use "../../foundation/system" as s;
+@use "../../foundation/mixin" as m;
+
+.p-home {
+    @include s.breakpoint(tablet) {
+    }
+    @include s.breakpoint(sp) {
+    }
+    p {
+        text-align: center;
+        padding: 20px 0;
+    }
+}
