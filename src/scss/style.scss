@@ -7,8 +7,6 @@
 // Layout
 @use "./Layout/header";
 @use "./Layout/footer";
-@use "./Layout/main";
-@use "./Layout/section";
 @use "./Layout/inner";
 
 // Object
@@ -25,3 +23,4 @@
 // Object/Utility
 @use "./Object/Utility/margin";
 @use "./Object/Utility/padding";
+@use "./Object/Utility/effect";

@@ -52,18 +52,14 @@ object {
 a {
     color: s.$c-black;
     text-decoration: none;
-    // カーソルは乗っているがクリックはされていない状態
     &:hover {
         opacity: 0.8;
         @include s.transition-base();
     }
-    // クリックされてから離されるまでの状態
     &:active {
     }
-    // 未訪問リンク
     &:link {
     }
-    // 訪問済みリンク
     &:visited {
     }
 }

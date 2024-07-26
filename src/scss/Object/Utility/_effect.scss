@@ -1,0 +1,23 @@
+@use "../../foundation/system" as s;
+@use "../../foundation/mixin" as m;
+
+.js-fadein {
+    opacity: 0;
+    transition: all ease-in-out .5s;
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.js-fadeup {
+    overflow: hidden;
+    span {
+        display: block;
+        transition: transform 1s;
+        transition-timing-function: cubic-bezier(.165,.84,.44,1);
+        transform: translate3d(0,100%,0);
+        &.is-active {
+            transform: translate3d(0,0,0);
+        }
+    }
+}

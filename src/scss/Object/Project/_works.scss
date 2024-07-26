@@ -127,6 +127,11 @@
             max-width: 249px;
             height: 76px;
         }
+        &:hover {
+            color: s.$c-white;
+            background-color: s.$c-black;
+            border: 1px solid s.$c-white;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -150,6 +155,11 @@
                     height: 16px;
                 }
             }
+            &:hover {
+                &::after {
+                    background-image: url(../images/common/icon-arrow_on@2x.png);
+                }
+            }
         }
         &--recruit {
             &::after {
@@ -159,6 +169,11 @@
                 @include s.breakpoint(tablet) {
                     width: 17px;
                     height: 12px;
+                }
+            }
+            &:hover {
+                &::after {
+                    background-image: url(../images/common/icon-blank_on@2x.png);
                 }
             }
         }
