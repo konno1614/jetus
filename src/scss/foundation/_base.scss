@@ -23,9 +23,7 @@ body {
     color: s.$c-black;
     background-color: s.$c-white;
     font-size: 1.6rem;
-    // @include s.notosansjp();
     @include s.inter();
-    // @include s.font_regular();
     @include s.font_medium();
     overflow-x: hidden;
     letter-spacing: 0;
@@ -33,7 +31,8 @@ body {
         overflow: hidden;
         touch-action: none;
     }
-    @include s.breakpoint(tablet) {
+    @include s.breakpoint(sp) {
+        font-size: 1.4rem;
         @include s.font_regular();
     }
 }

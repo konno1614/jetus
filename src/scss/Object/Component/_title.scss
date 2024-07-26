@@ -9,4 +9,9 @@
     }
     @include s.breakpoint(sp) {
     }
+    &--about {
+        @include s.breakpoint(sp) {
+            margin-bottom: 34px;
+        }
+    }
 }

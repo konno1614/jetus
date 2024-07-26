@@ -14,6 +14,7 @@
     }
     &.is-active {
         background-color: s.$c-black;
+        box-shadow: 0 0 8px s.$c-black;
     }
     &__inner {
         display: flex;
