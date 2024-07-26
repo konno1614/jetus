@@ -3,8 +3,7 @@
 
 // color system
 $c-white: #fff;
-$c-black: #333;
-$c-primary: #ca6060;
+$c-black: #1e1e1e;
 
 // responsive system
 @mixin breakpoint($point) {
@@ -24,6 +23,14 @@ $c-primary: #ca6060;
 // Noto Sans JP
 @mixin notosansjp() {
     font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+// Inter
+@mixin inter() {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 

@@ -2,9 +2,72 @@
 @use "../foundation/mixin" as m;
 
 .l-footer {
-    background-color: greenyellow;
-    @include s.breakpoint(tablet) {
-    }
+    margin-top: 204px;
+    position: relative;
+    background-color: s.$c-black;
+    padding: 92px 244px 45px 50px;
     @include s.breakpoint(sp) {
+        margin-top: 157px;
+        padding: 91px 18px 20px;
+    }
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include s.breakpoint(sp) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__logo {
+        max-width: 80px;
+        @include s.breakpoint(sp) {
+            max-width: 65px;
+        }
+    }
+    &__links {
+    }
+    &__list {
+        @include s.breakpoint(sp) {
+            margin-top: 50px;
+        }
+        li {
+            &+li {
+                margin-top: 16px;
+            }
+            a {
+                color: s.$c-white;
+            }
+        }
+    }
+    &__contact {
+        margin-top: 30px;
+    }
+    &__copyright {
+        color: s.$c-white;
+        font-size: 1.2rem;
+        display: block;
+        margin-top: 67px;
+        @include s.breakpoint(sp) {
+            font-size: 1.0rem;
+            margin-top: 85px;
+        }
+    }
+    &__page-top {
+        position: absolute;
+        right: 48px;
+        bottom: 48px;
+        width: 80px;
+        height: 80px;
+        background-image: url(../images/common/page-top@2x.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        @include s.breakpoint(sp) {
+            right: 24px;
+            bottom: 20px;
+            width: 40px;
+            height: 40px;
+        }
     }
 }

@@ -1,0 +1,166 @@
+@use "../../foundation/system" as s;
+@use "../../foundation/mixin" as m;
+
+.works {
+    margin-top: 120px;
+    @include s.breakpoint(tablet) {
+    }
+    @include s.breakpoint(sp) {
+    }
+    &__swiper-container {
+        position: relative;
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+    }
+    &__swiper {
+    }
+    &__swiper-wrapper {
+        .swiper-slide {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__swiper-buttons {
+        width: 104px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: -54px;
+        right: 48px;
+        @include s.breakpoint(sp) {
+            width: 63px;
+            top: -57px;
+            right: 26px;
+        }
+    }
+    &__swiper-button-prev {
+        position: static;
+        width: 40px;
+        height: 40px;
+        @include s.breakpoint(sp) {
+            width: 26px;
+            height: 26px;
+        }
+        &::after {
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/works/slider-prev.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: transparent;
+        }
+    }
+    &__swiper-button-next {
+        position: static;
+        width: 40px;
+        height: 40px;
+        @include s.breakpoint(sp) {
+            width: 26px;
+            height: 26px;
+        }
+        &::after {
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/works/slider-next.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: transparent;
+        }
+    }
+    &__swiper-pagination {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        left: 50% !important;
+        bottom: -34px !important;
+        transform: translateX(-50%) !important;
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: s.$c-black;
+            opacity: 1 !important;
+            margin: 0 18px !important;
+            @include s.transition-base();
+            @include s.breakpoint(tablet) {
+                width: 4px;
+                height: 4px;
+                margin: 0 9px !important;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            width: 16px;
+            height: 16px;
+            opacity: 1;
+            @include s.breakpoint(tablet) {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+    &__buttons {
+        margin-top: 152px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        @include s.breakpoint(tablet) {
+            margin-top: 82px;
+            flex-direction: column;
+        }
+    }
+    &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 494px;
+        height: 152px;
+        background-color: s.$c-white;
+        border: 1px solid s.$c-black;
+        border-radius: 80px;
+        font-size: 5.6rem;
+        @include s.breakpoint(tablet) {
+            font-size: 2.8rem;
+            max-width: 249px;
+            height: 76px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 37px;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include s.breakpoint(tablet) {
+                font-size: 2.8rem;
+                right: 22px;
+            }
+        }
+        &--company {
+            &::after {
+                width: 33px;
+                height: 32px;
+                background-image: url(../images/common/icon-arrow@2x.png);
+                @include s.breakpoint(tablet) {
+                    width: 17px;
+                    height: 16px;
+                }
+            }
+        }
+        &--recruit {
+            &::after {
+                width: 30px;
+                height: 22px;
+                background-image: url(../images/common/icon-blank@2x.png);
+                @include s.breakpoint(tablet) {
+                    width: 17px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+}

@@ -2,9 +2,51 @@
 @use "../foundation/mixin" as m;
 
 .l-header {
-    background-color: brown;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 41px 48px;
+    @include s.transition-base();
     @include s.breakpoint(tablet) {
+        padding: 30px 17px;
     }
-    @include s.breakpoint(sp) {
+    &.is-active {
+        background-color: s.$c-black;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        position: relative;
+        z-index: 999;
+        max-width: 84px;
+        @include s.breakpoint(tablet) {
+            max-width: 74px;
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            &+li {
+                margin-left: 30px;
+            }
+            a {
+                color: s.$c-white;
+            }
+        }
+    }
+    &__contact {
+        margin-left: 67px;
     }
 }

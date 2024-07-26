@@ -2,6 +2,13 @@
 @use "../../foundation/mixin" as m;
 
 .c-button {
+    background-color: s.$c-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 32px;
+    border-radius: 20px;
     @include s.breakpoint(tablet) {
     }
     @include s.breakpoint(sp) {

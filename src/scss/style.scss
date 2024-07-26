@@ -18,7 +18,9 @@
 @use "./Object/Component/title";
 
 // Object/Project
-@use "./Object/Project/home";
+@use "./Object/Project/mv";
+@use "./Object/Project/about";
+@use "./Object/Project/works";
 
 // Object/Utility
 @use "./Object/Utility/margin";

@@ -3,9 +3,11 @@ import '../scss/style.scss';
 import $ from 'jquery';
 import './lib/sample';
 import './lib/spNav';
+import './lib/utility';
+import './lib/mv';
+import './lib/works';
 
 $(function() {
-    console.log('Script!');
 });
 
 window.onload = function () {

@@ -4,11 +4,8 @@
 /* ハンバーガーメニュー */
 .c-hamburger {
     display: none;
-    @include s.breakpoint(sp) {
-        position: fixed;
-        z-index: 999;
-        top: 15px;
-        right: 15px;
+    @include s.breakpoint(tablet) {
+        position: relative;
         z-index: 999;
         display: inline-flex;
         align-items: center;
@@ -16,17 +13,14 @@
         flex-direction: column;
         @include s.transition-base();
         width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: s.$c-primary;
-        box-shadow: 0 0 5px rgba($color: s.$c-black, $alpha: .8);
+        height: 10px;
         &:hover {
             cursor: pointer;
         }
         span {
             position: relative;
             display: inline-block;
-            width: 16px;
+            width: 40px;
             height: 2px;
             background-color: s.$c-white;
             @include s.transition-base();
@@ -41,9 +35,6 @@
                     top: 3px;
                 }
                 &:nth-child(2) {
-                    display: none;
-                }
-                &:nth-child(3) {
                     transform: rotate(-45deg);
                     top: -3px;
                 }
@@ -53,35 +44,44 @@
 }
 /* sp ナビ */
 .c-sp-nav {
-    background-color: s.$c-white;
-    position: fixed;
-    z-index: 99;
-    overflow-y: scroll;
-    top: 0;
-    left: -100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    @include s.transition-base();
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    &.is-open {
-        visibility: visible;
-        opacity: 1;
-        left: 0;
-    }
-    &__list {
-        list-style: none;
-        li {
-            border-bottom: 1px solid #F2F2F2;
-            a {
-                text-decoration: none;
-                font-size: 1.2rem;
-                color: s.$c-black;
-                display: block;
-                padding: 20px;
+    @include s.breakpoint(tablet) {
+        flex-direction: column;
+        justify-content: center;
+        background-color: s.$c-black;
+        position: fixed;
+        z-index: 99;
+        overflow-y: scroll;
+        top: 0;
+        left: -100%;
+        @include s.transition-base();
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        &.is-open {
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+        }
+        &__list {
+            align-items: flex-start;
+            flex-direction: column;
+            li {
+                &+li {
+                    margin-top: 24px;
+                    margin-left: 0;
+                }
+                a {
+                    font-size: 3.2rem;
+                    display: block;
+                }
             }
+        }
+        &__contact {
+            margin-left: 0;
+            position: absolute;
+            bottom: 40px;
+            width: 130px;
         }
     }
 }
