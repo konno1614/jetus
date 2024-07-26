@@ -51,15 +51,15 @@
             width: 8px;
             height: 8px;
             background-color: s.$c-white;
-            opacity: 0.5;
+            opacity: 1 !important;
             margin: 0 12px !important;
+            @include s.transition-base();
             @include s.breakpoint(tablet) {
                 width: 4px;
                 height: 4px;
                 margin: 0 6px !important;
             }
         }
-        /* 現在のスライドのスタイル */
         .swiper-pagination-bullet-active {
             width: 16px;
             height: 16px;

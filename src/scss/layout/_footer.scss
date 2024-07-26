@@ -2,10 +2,12 @@
 @use "../foundation/mixin" as m;
 
 .l-footer {
+    margin-top: 204px;
     position: relative;
     background-color: s.$c-black;
     padding: 92px 244px 45px 50px;
     @include s.breakpoint(sp) {
+        margin-top: 157px;
         padding: 91px 18px 20px;
     }
     &__top {
