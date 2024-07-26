@@ -33,6 +33,9 @@ body {
         overflow: hidden;
         touch-action: none;
     }
+    @include s.breakpoint(tablet) {
+        @include s.font_regular();
+    }
 }
 ::selection {
     background-color: rgba($color: s.$c-black, $alpha: 0.7);

@@ -1,6 +1,7 @@
 import $ from "jquery";
 
 $(function() {
+    // header
     const scrollY = $(window).height();
     if ($(window).scrollTop() > scrollY) {
         $(".js-header").addClass("is-active");
@@ -15,4 +16,5 @@ $(function() {
             $(".js-header").removeClass("is-active");
         }
     });
+
 });
