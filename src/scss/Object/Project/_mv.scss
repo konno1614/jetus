@@ -71,6 +71,7 @@
         }
     }
     &__catch {
+        overflow: hidden;
         font-size: 8.0rem;
         line-height: calc(96/80);
         color: s.$c-white;
@@ -91,6 +92,7 @@
         }
     }
     &__message {
+        overflow: hidden;
         font-size: 2.4rem;
         line-height: calc(33/24);
         color: s.$c-white;

@@ -6,13 +6,13 @@ $(function() {
         spaceBetween: 16,
         slidesPerView: 1.5,
         autoplay: {
-            delay: 3000,
+            delay: 2000,
             stopOnLastSlide: false,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
             reverseDirection: false
         },
-        speed: 1000,
+        speed: 500,
         centeredSlides: true,
         navigation: {
             nextEl: '.works__swiper-button-next',
@@ -28,5 +28,17 @@ $(function() {
                 slidesPerView: 3.5,
             },
         },
+    });
+
+    worksSwiper.autoplay.stop();
+
+    $(window).scroll(function() {
+        let position = $('.works__swiper').offset().top - $(window).innerHeight() + 150,
+            scrollTop = $(window).scrollTop();
+        if(scrollTop > position) {
+            worksSwiper.autoplay.start();
+        }else{
+            worksSwiper.autoplay.stop();
+        }
     });
 });
