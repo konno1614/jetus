@@ -1,138 +1,169 @@
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
-    <meta charset="UTF-8" />
+        <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Sample Site</title>
-
     <meta name="description" content="Description Text Description Text Description Text Description Text" />
-
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no">
     <!-- favicon -->
-    <link rel="shortcut icon" href="./images/favicon.ico" />
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" href="./images/android-chrome-192x192.png" />
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./images/android-chrome-192x192.png">
     <!-- og -->
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Sample Site" />
-
     <meta property="og:title" content="Sample Site" />
-
     <meta property="og:description" content="Description Text Description Text Description Text Description Text" />
-
     <meta property="og:image" content="https://www.google.com/images/ogp.png" />
-
     <meta property="og:url" content="https://www.google.com/" />
-
     <!-- twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-
     <meta property="twitter:title" content="Sample Site" />
-
-    <meta property="twitter:description"
-        content="Description Text Description Text Description Text Description Text" />
-
+    <meta property="twitter:description" content="Description Text Description Text Description Text Description Text" />
     <meta property="twitter:image" content="https://www.google.com/images/ogp.png" />
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!-- external files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css" />
-    <style>
-        :root {
-            --theme-color: yellow;
-        }
 
-        .box {
-            background-color: var(--theme-color);
-        }
-    </style>
 </head>
 
-<body id="home">
-    <header class="l-header">
-        Header
+<body>
+    <header class="l-header js-header">
+    <div class="l-header__inner">
+        <div class="l-header__logo">
+            <a href="#">
+                <img src="./images/header/logo@2x.png" alt="Jetus">
+            </a>
+        </div>
+        <nav class="c-sp-nav l-header__nav">
+            <ul class="c-sp-nav__list l-header__list">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Works</a>
+                </li>
+                <li>
+                    <a href="#">Company</a>
+                </li>
+                <li>
+                    <a href="#">Recruit</a>
+                </li>
+            </ul>
+            <a class="c-sp-nav__contact l-header__contact" href="#">Contact</a>
+        </nav>
+        <div class="c-hamburger js-toggle-nav">
+    <span></span>
+    <span></span>
+</div>
+<!-- <nav class="c-sp-nav">
+    <ul class="c-sp-nav__list">
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Works</a>
+        </li>
+        <li>
+            <a href="#">Company</a>
+        </li>
+        <li>
+            <a href="#">Recruit</a>
+        </li>
+    </ul>
+    <a class="c-sp-nav__contact" href="#">Contact</a>
+</nav> -->
+<div class="c-sp-nav-bg"></div>
 
-        <!-- トップページでだしたいナビ -->
-        <p>topのみ</p>
-    </header>
-
-    <div class="c-hamburger js-toggle-nav">
-        <span></span>
-        <span></span>
-        <span></span>
     </div>
-    <nav class="c-sp-nav">
-        <ul class="c-sp-nav__list">
-            <li>
-                <a href="#section01">Nav01</a>
-            </li>
-            <li>
-                <a href="#section02">Nav02</a>
-            </li>
-            <li>
-                <a href="#section03">Nav03</a>
-            </li>
-            <li>
-                <a href="#section04">Nav04</a>
-            </li>
-            <li>
-                <a href="#section05">Nav05</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="c-sp-nav-bg"></div>
+</header>
 
     <main class="l-main p-top p-home">
-        <section id="section01" class="l-section">
+        <section class="mv">
+            <div class="swiper mv__swiper">
+                <div class="swiper-wrapper mv__swiper-wrapper">
+                    <div class="swiper-slide swiper-slide01"></div>
+                    <div class="swiper-slide swiper-slide02"></div>
+                    <div class="swiper-slide swiper-slide03"></div>
+                </div>
+                <div class="swiper-pagination mv__swiper-pagination"></div>
+            </div>
+            <h1 class="mv__catch">
+                Where<br>
+                conversations<br>
+                connect.
+            </h1>
+            <p class="mv__message">
+                Need design and production<br>
+                for website and advertisement?<br>
+                - Jetus is your choice.
+            </p>
+            <div class="mv__scrolldown">
+                <span>Scroll Down</span>
+            </div>
+        </section>
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section01
-                <br />
+                <br>
                 <p>
                     <a href="./about/">about</a>
                 </p>
-                <div class="box">BOX Test</div>
+                <div class="box">
+                    BOX Test
+                </div>
             </div>
         </section>
-        <section id="section02" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section02
-                <br />
+                <br>
                 <p>
                     <a href="./news/">news</a>
                 </p>
             </div>
         </section>
-        <section id="section03" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
-                Section03<br />
+                Section03<br>
                 <p class="u-font--corporate">corporate</p>
                 <p class="u-font--yomogi">yomogi</p>
                 <p class="u-font--genjyuu">genjyuu</p>
                 <p class="u-font--genjyuu_medium">genjyuu_medium</p>
             </div>
         </section>
-        <section id="section04" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
-            <div class="l-inner">Section04</div>
+            <div class="l-inner">
+                Section04
+            </div>
         </section>
-        <section id="section05" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
-            <div class="l-inner">Section05</div>
+            <div class="l-inner">
+                Section05
+            </div>
         </section>
     </main>
 
-    <footer class="l-footer">footer</footer>
-    <script defer src="./js/index.js"></script>
-</body>
+    <footer class="l-footer">
+    footer
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="./js/index.js"></script>
 
+</body>
 </html>

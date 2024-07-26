@@ -3,9 +3,10 @@ import '../scss/style.scss';
 import $ from 'jquery';
 import './lib/sample';
 import './lib/spNav';
+import './lib/mv';
+import './lib/utility';
 
 $(function() {
-    console.log('Script!');
 });
 
 window.onload = function () {

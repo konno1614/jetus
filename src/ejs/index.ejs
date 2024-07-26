@@ -11,12 +11,33 @@
     <%- include(path + '/components/_head.ejs',{path:path,pageId:pageId,pageTitle:pageTitle}); %>
 </head>
 
-<body id="<%= pageId %>">
+<body>
     <%- include(path + '/components/_header.ejs',{path:path,pageId:pageId,pageTitle:pageTitle}); %>
-    <%- include(path + '/components/_sp-nav.ejs',{path:path,pageId:pageId,pageTitle:pageTitle}); %>
-
     <main class="l-main p-<%= pageType %> p-<%= pageId %>">
-        <section id="section01" class="l-section">
+        <section class="mv">
+            <div class="swiper mv__swiper">
+                <div class="swiper-wrapper mv__swiper-wrapper">
+                    <div class="swiper-slide swiper-slide01"></div>
+                    <div class="swiper-slide swiper-slide02"></div>
+                    <div class="swiper-slide swiper-slide03"></div>
+                </div>
+                <div class="swiper-pagination mv__swiper-pagination"></div>
+            </div>
+            <h1 class="mv__catch">
+                Where<br>
+                conversations<br>
+                connect.
+            </h1>
+            <p class="mv__message">
+                Need design and production<br>
+                for website and advertisement?<br>
+                - Jetus is your choice.
+            </p>
+            <div class="mv__scrolldown">
+                <span>Scroll Down</span>
+            </div>
+        </section>
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section01
@@ -29,7 +50,7 @@
                 </div>
             </div>
         </section>
-        <section id="section02" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section02
@@ -39,7 +60,7 @@
                 </p>
             </div>
         </section>
-        <section id="section03" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section03<br>
@@ -49,13 +70,13 @@
                 <p class="u-font--genjyuu_medium">genjyuu_medium</p>
             </div>
         </section>
-        <section id="section04" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section04
             </div>
         </section>
-        <section id="section05" class="l-section">
+        <section class="l-section">
             <h2 class="c-title">h2タイトル</h2>
             <div class="l-inner">
                 Section05
