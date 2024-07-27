@@ -16,11 +16,6 @@
             background-size: cover;
             height: 100vh;
             height: 100svh;
-            min-height: 900px;
-            @include s.breakpoint(tablet) {
-                min-height: 100vh;
-                min-height: 100svh;
-            }
         }
         .swiper-slide01 {
             background-image: url(../images/mv/web_ph_mv_01.png);
