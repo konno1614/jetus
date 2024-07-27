@@ -9,8 +9,9 @@
     width: 128px;
     height: 32px;
     border-radius: 20px;
-    @include s.breakpoint(tablet) {
-    }
-    @include s.breakpoint(sp) {
+    &:hover {
+        color: s.$c-white;
+        background-color: rgba($color: s.$c-black, $alpha: 0.7);
+        border: 1px solid s.$c-white;
     }
 }
