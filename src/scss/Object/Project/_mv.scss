@@ -14,8 +14,13 @@
             background-repeat: no-repeat;
             background-position: center top;
             background-size: cover;
-            min-height: 100vh;
-            min-height: 100svh;
+            height: 100vh;
+            height: 100svh;
+            min-height: 900px;
+            @include s.breakpoint(tablet) {
+                min-height: 100vh;
+                min-height: 100svh;
+            }
         }
         .swiper-slide01 {
             background-image: url(../images/mv/web_ph_mv_01.png);
@@ -74,6 +79,7 @@
         overflow: hidden;
         font-size: 8.0rem;
         line-height: calc(96/80);
+        @include m.lineHeightSpaceFill(calc(96/80));
         color: s.$c-white;
         position: absolute;
         top: 50%;
@@ -81,20 +87,20 @@
         transform: translate(-50%,-50%);
         z-index: 9;
         width: 540px;
-        @include s.breakpoint(tablet) {
-            font-size: 6.0rem;
-            left: 17px;
-            transform: translate(0,-50%);
-            width: auto;
-        }
         @include s.breakpoint(sp) {
             font-size: 4.0rem;
+            line-height: calc(48/40);
+            @include m.lineHeightSpaceFill(calc(48/40));
+            left: 18px;
+            transform: translate(0,-50%);
+            width: auto;
         }
     }
     &__message {
         overflow: hidden;
         font-size: 2.4rem;
-        line-height: calc(33/24);
+        line-height: calc(33.79/24);
+        @include m.lineHeightSpaceFill(calc(33.79/24));
         color: s.$c-white;
         position: absolute;
         left: 50%;
@@ -102,20 +108,20 @@
         transform: translateX(-50%);
         z-index: 9;
         width: 540px;
-        @include s.breakpoint(tablet) {
-            font-size: 1.8rem;
-            left: 17px;
-            bottom: 70px;
-            transform: translateX(0);
-            width: auto;
-        }
         @include s.breakpoint(sp) {
             font-size: 1.2rem;
+            line-height: calc(16/12);
+            @include m.lineHeightSpaceFill(calc(16/12));
+            left: 17px;
+            bottom: 68px;
+            transform: translateX(0);
+            width: auto;
         }
     }
     &__scrolldown {
         writing-mode: vertical-rl;
-        line-height: 100%;
+        line-height: calc(24/16);
+        @include m.lineHeightSpaceFill(calc(24/16));
         color: s.$c-white;
         position: absolute;
         right: 50px;
@@ -123,8 +129,10 @@
         z-index: 9;
         @include s.breakpoint(tablet) {
             font-size: 1.2rem;
+            line-height: calc(16/12);
+            @include m.lineHeightSpaceFill(calc(16/12));
             right: 18px;
-            bottom: 167px;
+            bottom: 169px;
         }
         span {
             position: relative;
@@ -142,7 +150,7 @@
                 bottom: -220px;
                 @include s.breakpoint(tablet) {
                     height: 160px;
-                    bottom: -167px;
+                    bottom: -169px;
                 }
             }
         }

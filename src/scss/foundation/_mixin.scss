@@ -1,4 +1,15 @@
-@mixin sample() {
-    margin: 0;
-    padding: 0;
+@mixin lineHeightSpaceFill($line-height) {
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+    }
+    &::before {
+        margin-top: calc((1 - #{$line-height}) * 0.5em);
+    }
+    &::after {
+        margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+    }
 }

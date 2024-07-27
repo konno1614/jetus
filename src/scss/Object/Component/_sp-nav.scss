@@ -67,13 +67,12 @@
             align-items: flex-start;
             flex-direction: column;
             li {
+                font-size: 3.2rem;
+                line-height: calc(56/32);
+                @include m.lineHeightSpaceFill(calc(56/32));
                 &+li {
                     margin-top: 24px;
                     margin-left: 0;
-                }
-                a {
-                    font-size: 3.2rem;
-                    display: block;
                 }
             }
         }

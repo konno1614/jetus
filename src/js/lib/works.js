@@ -25,7 +25,7 @@ $(function() {
         },
         breakpoints: {
             599: {
-                slidesPerView: 3.5,
+                slidesPerView: 4,
             },
         },
     });

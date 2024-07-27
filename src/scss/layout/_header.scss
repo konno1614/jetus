@@ -7,10 +7,10 @@
     z-index: 999;
     top: 0;
     left: 0;
-    padding: 41px 48px;
+    padding: 42px 48px 42px 49px;
     @include s.transition-base();
     @include s.breakpoint(tablet) {
-        padding: 30px 17px;
+        padding: 29px 23px 29px 17px;
     }
     &.is-active {
         background-color: s.$c-black;
@@ -39,6 +39,9 @@
         align-items: center;
         justify-content: space-between;
         li {
+            color: s.$c-white;
+            line-height: calc(24/16);
+            @include m.lineHeightSpaceFill(calc(24/16));
             &+li {
                 margin-left: 30px;
             }
