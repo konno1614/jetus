@@ -17,6 +17,5 @@ $(function() {
             type: 'bullets',
             clickable: true
         },
-        allowTouchMove: false
     });
 });

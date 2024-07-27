@@ -26,14 +26,20 @@
         }
     }
     &__links {
+        display: flex;
+        flex-direction: column;
     }
     &__list {
+        display: flex;
+        flex-direction: column;
         @include s.breakpoint(sp) {
             margin-top: 50px;
         }
         li {
+            line-height: calc(31/16);
+            @include m.lineHeightSpaceFill(calc(31/16));
             &+li {
-                margin-top: 16px;
+                margin-top: 20px;
             }
             a {
                 color: s.$c-white;
@@ -41,15 +47,19 @@
         }
     }
     &__contact {
-        margin-top: 30px;
+        margin-top: 33px;
     }
     &__copyright {
         color: s.$c-white;
         font-size: 1.2rem;
+        line-height: calc(24/12);
+        @include m.lineHeightSpaceFill(calc(24/12));
         display: block;
         margin-top: 67px;
         @include s.breakpoint(sp) {
             font-size: 1.0rem;
+            line-height: calc(24/10);
+            @include m.lineHeightSpaceFill(calc(24/10));
             margin-top: 85px;
         }
     }

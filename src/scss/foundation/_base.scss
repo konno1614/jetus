@@ -24,7 +24,7 @@ body {
     background-color: s.$c-white;
     font-size: 1.6rem;
     @include s.inter();
-    @include s.font_medium();
+    @include s.font_regular();
     overflow-x: hidden;
     letter-spacing: 0;
     &.is-open {
@@ -33,7 +33,6 @@ body {
     }
     @include s.breakpoint(sp) {
         font-size: 1.4rem;
-        @include s.font_regular();
     }
 }
 ::selection {

@@ -3,15 +3,20 @@
 
 .c-title {
     font-size: 5.6rem;
-    line-height: 100%;
-    margin-bottom: 56px;
-    @include s.breakpoint(tablet) {
-    }
+    line-height: calc(56/32);
+    @include m.lineHeightSpaceFill(calc(56/32));
     @include s.breakpoint(sp) {
+        font-size: 4.0rem;
+        line-height: calc(96/40);
+        @include m.lineHeightSpaceFill(calc(96/40));
     }
     &--about {
+        margin-bottom: 55px;
         @include s.breakpoint(sp) {
             margin-bottom: 34px;
         }
+    }
+    &--works {
+        margin-bottom: 57px;
     }
 }

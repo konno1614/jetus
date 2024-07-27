@@ -2,8 +2,8 @@
 @use "../foundation/mixin" as m;
 
 .l-inner {
-    max-width: calc(1350px + 100px);
-    padding: 0 50px;
+    max-width: calc(1350px + 98px);
+    padding: 0 48px;
     margin: 0 auto;
     @include s.breakpoint(sp) {
         padding: 0 18px;
