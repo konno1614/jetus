@@ -2,10 +2,9 @@
 @use "../../foundation/mixin" as m;
 
 .about {
-    margin-top: 130px;
-    @include s.breakpoint(tablet) {
-    }
+    margin-top: 136px;
     @include s.breakpoint(sp) {
+        margin-top: 122px;
     }
     &__block {
         display: flex;
@@ -48,7 +47,7 @@
         padding-left: 64px;
         @include s.breakpoint(tablet) {
             width: 100%;
-            margin-top: 71px;
+            margin-top: 72px;
             padding-top: 0;
             padding-left: 0;
         }

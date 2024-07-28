@@ -1,10 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
 <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jetus Sample Site</title>
@@ -33,42 +31,39 @@
     <!-- external files -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css" />
-
 </head>
 
 <body>
     <header class="l-header js-header">
-    <div class="l-header__inner">
-        <div class="l-header__logo">
-            <a href="#">
-                <img src="./images/common/logo@2x.png" alt="Jetus">
-            </a>
+        <div class="l-header__inner">
+            <div class="l-header__logo">
+                <a href="#">
+                    <img src="./images/common/logo@2x.png" alt="Jetus">
+                </a>
+            </div>
+            <nav class="c-sp-nav l-header__nav">
+                <ul class="c-sp-nav__list l-header__list">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Works</a>
+                    </li>
+                    <li>
+                        <a href="#">Company</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Recruit</a>
+                    </li>
+                </ul>
+                <a class="c-button c-sp-nav__contact l-header__contact" href="#">Contact</a>
+            </nav>
+            <div class="c-hamburger js-toggle-nav">
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <nav class="c-sp-nav l-header__nav">
-            <ul class="c-sp-nav__list l-header__list">
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Works</a>
-                </li>
-                <li>
-                    <a href="#">Company</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">Recruit</a>
-                </li>
-            </ul>
-            <a class="c-button c-sp-nav__contact l-header__contact" href="#">Contact</a>
-        </nav>
-        <div class="c-hamburger js-toggle-nav">
-    <span></span>
-    <span></span>
-</div>
-
-    </div>
-</header>
-
+    </header>
     <main id="main">
         <section class="mv">
             <div class="swiper mv__swiper">
@@ -145,8 +140,8 @@
                 <h2 class="c-title c-title--works js-fadeup-title">
                     <span>Works</span>
                 </h2>
-                <div class="works__swiper-container">
-                    <div class="swiper works__swiper js-fadein">
+                <div class="works__swiper-container js-fadein">
+                    <div class="swiper works__swiper">
                         <div class="swiper-wrapper works__swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="./images/works/web_ph_works_01.png" alt="web_ph_works">
@@ -168,11 +163,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="works__swiper-buttons js-fadein">
+                    <div class="works__swiper-buttons">
                         <div class="swiper-button-prev works__swiper-button-prev"></div>
                         <div class="swiper-button-next works__swiper-button-next"></div>
                     </div>
-                    <div class="swiper-pagination works__swiper-pagination js-fadein"></div>
+                    <div class="swiper-pagination works__swiper-pagination "></div>
                 </div>
                 <div class="works__buttons">
                     <a class="works__button works__button--company js-fadein" href="#">Company</a>
@@ -181,37 +176,36 @@
             </div>
         </section>
     </main>
-
     <footer class="l-footer">
-    <div class="l-footer__top">
-        <div class="l-footer__logo">
-            <a href="#">
-                <img src="./images/common/logo@2x.png" alt="Jetus">
-            </a>
+        <div class="l-footer__top">
+            <div class="l-footer__logo">
+                <a href="#">
+                    <img src="./images/common/logo@2x.png" alt="Jetus">
+                </a>
+            </div>
+            <div class="l-footer__links">
+                <ul class="l-footer__list">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Works</a>
+                    </li>
+                    <li>
+                        <a href="#">Company</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Recruit</a>
+                    </li>
+                </ul>
+                <a class="c-button l-footer__contact" href="#">Contact</a>
+            </div>
+            <a class="l-footer__page-top js-page-top" href="#main"></a>
         </div>
-        <div class="l-footer__links">
-            <ul class="l-footer__list">
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Works</a>
-                </li>
-                <li>
-                    <a href="#">Company</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">Recruit</a>
-                </li>
-            </ul>
-            <a class="c-button l-footer__contact" href="#">Contact</a>
-        </div>
-        <a class="l-footer__page-top js-page-top" href="#main"></a>
-    </div>
-    <small class="l-footer__copyright">&copy; Jetus Inc. All rights reserved.</small>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script defer src="./js/index.js"></script>
-
+        <small class="l-footer__copyright">&copy; Jetus Inc. All rights reserved.</small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="./js/index.js"></script>
 </body>
+
 </html>
