@@ -3,10 +3,6 @@
 
 .mv {
     position: relative;
-    @include s.breakpoint(tablet) {
-    }
-    @include s.breakpoint(sp) {
-    }
     &__swiper {
     }
     &__swiper-wrapper {
@@ -14,7 +10,6 @@
             background-repeat: no-repeat;
             background-position: center top;
             background-size: cover;
-            height: 100vh;
             height: 100svh;
         }
         .swiper-slide01 {
